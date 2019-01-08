@@ -13,8 +13,6 @@ val strFlatMap = t3.flatMap(line => line.split(" "))
 t1.collect{case x => x + 1}
 
 val collect = t1.collect{case x if x > 2=> x + 1}
-
-t1.hasDefiniteSize
-val t5 = Traversable(1,2,3,4,5,6)
-val strBuffer = new StringBuilder()
-t1.addString(strBuffer,"[",",","]")
+val i3 = Iterable(2,4,3,5)
+val i4 = Iterable(2,3,4,5)
+i4.sameElements(i3)
