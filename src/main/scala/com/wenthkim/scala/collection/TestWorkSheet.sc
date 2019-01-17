@@ -1,3 +1,4 @@
+import scala.collection.mutable
 
 val t1 = Traversable(1,2,3)
 
@@ -9,10 +10,10 @@ val map = t1.map(x => x+1)
 val flatMap = t1.flatMap(x => x to 5)
 val t3 = Traversable("hello world","this is a example","just a test")
 val strFlatMap = t3.flatMap(line => line.split(" "))
-
-t1.collect{case x => x + 1}
-
-val collect = t1.collect{case x if x > 2=> x + 1}
-val i3 = Iterable(2,4,3,5)
-val i4 = Iterable(2,3,4,5)
-i4.sameElements(i3)
+val s1 = Seq(1,2,3,4,5)
+val s2 = Seq(6,7,8,9,10)
+val s3 = Seq(0,1,2,3,4)
+val s4 = Seq(1,1,2,3,2,3,4)
+val buffer = mutable.Buffer(1,2,3,4,5)
+buffer.clear()
+buffer.foreach(print(_))
