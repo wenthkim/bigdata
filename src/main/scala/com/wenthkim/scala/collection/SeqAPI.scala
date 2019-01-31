@@ -200,7 +200,7 @@ object SeqAPI {
     * sortBy
     */
   def sorting(): Unit = {
-   val s3 = Seq(4,2,5,8,3,0)
+    val s3 = Seq(4,2,5,8,3,0)
     //按自然升序排
     //结果:res0: Seq[Int] = List(0, 2, 3, 4, 5, 8)
     s3.sorted
